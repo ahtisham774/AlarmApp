@@ -17,7 +17,7 @@ let hr = 0;
 let m = 0;
 let s = 0;
 let id;
-musics = ["musics/music.mp3","musics/beep.wav"]
+musics = ["musics/music.mp3","musics/beep.wav","musics/Nice Wake Up.mp3"]
 var audio = new Audio(musics[0]);
 //setInterval(displayTime,100);
 function displayTime() {
@@ -45,7 +45,7 @@ reset.addEventListener("click",()=>{
 btn.addEventListener("click", () => {
     if(dT.value !==""){
 
-        if(list_items.value == 0 || list_items.value == 1){
+        if(list_items.value == 0 || list_items.value == 1 || list_items.value == 2){
             audio.src = musics[list_items.value]
             audio.loop = true;
         }
