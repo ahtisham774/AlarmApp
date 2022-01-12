@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main__div">
+        <div class="alarm_set">
+          <div class="time_elapse">
+            <label for="time">Remaining Time</label>
+            <div class="time">
+              <div id="hour">0</div>
+              <div id="minute">0</div>
+              <div id="second">0</div>
+            </div>
+          </div>
+          <img src="media/images.png" alt="alarm" id="clock" />
+          <form action="get" class="form">
+            <label for="alarm_time">Select Time</label>
+            <input type="time" name="alarm" id="alarm_time" class="alarm" />
+            <select class="tunes_list" id="list">
+              <option  value="0">Musics Tune</option>
+              <option  value="1">Beep Tune</option>
+              <option  value="2">Not Available</option>
+              <option  value="3">Not Available</option>
+              <option  value="4">Not Available</option>
+            </select>
+            <input type="button" value="Set Alarm" id="set_alarm" class="btn" />
+            <button type="reset" class="btn" id="reset">Rest</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script/script.js"></script>
+  </body>
+</html>
