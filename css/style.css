@@ -177,6 +177,9 @@ button[type="button"]{
     margin: 20px 0 0 0;
 }
 @media screen and (max-width: 640px) {
+        *{
+        transition: all 1s ease-in-out;
+    }
   .alarm_set {
     position: relative;
     width: 300px;
