@@ -63,7 +63,7 @@ input[type="time"]{
     display:flex;
     justify-content:center;    
     text-align: center;
-    color: black;
+    color: red;
     letter-spacing: 3px;
 }
 .btn{
