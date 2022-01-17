@@ -176,4 +176,36 @@ button[type="button"]{
     border-radius:0 0 10px 10px ;
     margin: 20px 0 0 0;
 }
-
+@media screen and (max-width: 640px) {
+  .alarm_set {
+    position: relative;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+    background: #e2d8d8;
+    border-radius: 20px;
+  }
+  .alarm {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+  .tunes_list{
+      width: 100%;
+  }
+  #clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 66%;
+    left: 78%;
+    z-index: 3;
+  }
