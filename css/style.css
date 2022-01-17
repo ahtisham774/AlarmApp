@@ -221,6 +221,7 @@ button[type="button"]{
     left: 85%;
     z-index: 3;
   }
+}
     @media screen and (max-width: 640px) and (orientation: landscape){
 
     body{
