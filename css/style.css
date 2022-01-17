@@ -46,12 +46,12 @@ body{
     color:rgb(49, 51, 53);
     padding: 15px ;
     width: 300px;
-    height: 100%;
     border-radius: 10px ;
     outline:none;
     border: none;
     background: linear-gradient(450deg,rgba(146, 145, 145, 0.9),rgb(155, 152, 152),#9499a0);
     box-shadow:4px 10px 10px transparent,4px 6px 10px transparent,4px 4px 10px transparent,4px 4px 10px transparent;
+    font-size:2rem;
 }
 .form{
     display: flex;
