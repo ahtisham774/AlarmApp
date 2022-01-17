@@ -196,9 +196,10 @@ button[type="button"]{
   }
   .alarm {
     width: 250px;
-    height:50px;
+    height:60px;
     overflow:none;
-    color:red;  
+    color:red;
+    z-index:1000;  
   }
   .btn {
     width: 250px;
