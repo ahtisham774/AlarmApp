@@ -99,12 +99,12 @@ input[type="time"]{
 .time_elapse{
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items:center;
     flex-direction: column;
     background:rgb(0,0,0);
     color:#fff;
-    border-radius:0  0 50px 50px;
+    border-radius:0  0 10px 10px;
     width:100%;
     height: 140px;
     top:-10px;
@@ -201,6 +201,9 @@ button[type="button"]{
   .tunes_list{
       width: 250px;
   }
+  .time_elapse label{
+   font-size: 1.5rem;
+}
   #clock {
     display: flex;
     justify-content: center;
