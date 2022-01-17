@@ -102,11 +102,11 @@ input[type="time"]{
     justify-content: center;
     align-items:center;
     flex-direction: column;
-    background:blue;
+    background:rgb(0,0,0);
     color:#fff;
     border-radius:0  0 50px 50px;
     width:80%;
-    height: 15vh;
+    height: 130px;
     top:-10px;
     z-index: 1;
     font-weight: 100;
