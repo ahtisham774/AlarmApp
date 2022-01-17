@@ -197,8 +197,7 @@ button[type="button"]{
   .alarm {
     width: 250px;
     height:60px;
-    overflow:none;
-    color:blue; 
+    padding:0;
   }
   .btn {
     width: 250px;
