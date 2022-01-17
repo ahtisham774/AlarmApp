@@ -51,6 +51,7 @@ body{
     background: linear-gradient(450deg,rgba(146, 145, 145, 0.9),rgb(155, 152, 152),#9499a0);
     font-size:2rem;
     font-family:'digital-clock-font';
+    padding-bottom:30px;
 }
 .form{
     display: flex;
