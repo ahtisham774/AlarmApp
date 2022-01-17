@@ -204,6 +204,9 @@ button[type="button"]{
   .time_elapse label{
    font-size: 1.5rem;
 }
+    .time{
+    bottom:5px;
+    }
   #clock {
     display: flex;
     justify-content: center;
