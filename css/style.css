@@ -197,7 +197,7 @@ button[type="button"]{
   .alarm {
     width: 250px;
     height:60px;
-    padding:0;
+    padding:0px;
   }
   .btn {
     width: 250px;
