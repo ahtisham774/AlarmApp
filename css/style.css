@@ -130,7 +130,7 @@ input[type="time"]{
     position: relative;
     width: 100%;
     color:red;
-    font-family: 'digital-clock-font';
+   
 }
 button[type="reset"]{
     margin: 1px 0 30px 0;
