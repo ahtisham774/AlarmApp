@@ -198,8 +198,7 @@ button[type="button"]{
     width: 250px;
     height:60px;
     overflow:none;
-    color:red;
-    z-index:1000;  
+    color:blue; 
   }
   .btn {
     width: 250px;
