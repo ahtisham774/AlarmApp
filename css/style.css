@@ -193,13 +193,13 @@ button[type="button"]{
     border-radius: 20px;
   }
   .alarm {
-    width: 100%;
+    width: 250px;
   }
   .btn {
-    width: 100%;
+    width: 250px;
   }
   .tunes_list{
-      width: 100%;
+      width: 250px;
   }
   #clock {
     display: flex;
