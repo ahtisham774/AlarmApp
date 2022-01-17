@@ -222,6 +222,10 @@ button[type="button"]{
     @media screen and (max-width: 640px) and (orientation: landscape){
 
     body{
-        overflow: scroll;
+        margin:0;
+        padding:0;
+    }
+    .container{
+        overflow:scroll;    
     }
 }
