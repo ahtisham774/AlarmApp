@@ -205,7 +205,7 @@ button[type="button"]{
    font-size: 1.5rem;
 }
     .time{
-    bottom:5px;
+    bottom:10px;
     }
   #clock {
     display: flex;
