@@ -44,6 +44,11 @@ body{
     border-radius:20px;
 }
 .alarm{
+    display:flex;
+    justify-content:center;    
+    text-align: center;
+    color: black;
+    letter-spacing: 3px;
     width: 300px;
     height:60px;
     border-radius: 10px ;
@@ -51,20 +56,13 @@ body{
     border: none;
     background: linear-gradient(450deg,rgba(146, 145, 145, 0.9),rgb(155, 152, 152),#9499a0);
     font-size:2rem;
-    font-family:'digital-clock-font';
+  
 }
 .form{
     display: flex;
     justify-content:center;
     align-items:center;
     flex-direction: column;
-}
-input[type="time"]{
-    display:flex;
-    justify-content:center;    
-    text-align: center;
-    color: black;
-    letter-spacing: 3px;
 }
 .btn{
     color:#fff;
