@@ -196,7 +196,8 @@ button[type="button"]{
   }
   .alarm {
     width: 250px;
-    height:80px;
+    height:60px;
+    overflow:none;
   }
   .btn {
     width: 250px;
