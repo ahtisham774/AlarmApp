@@ -4,9 +4,7 @@ let clock = document.querySelector("#clock");
 let outPutDays = document.querySelector("#day");
 let outPutMonths = document.querySelector("#month");
 let outPutYears = document.querySelector("#year");
-let outPutHours = document.querySelector("#hour");
-let outPutMinutes = document.querySelector("#minute");
-let outPutSeconds = document.querySelector("#second");
+
 const reset = document.querySelector("#reset");
 const tunes = document.querySelector("#tunes");
 const tune_div = document.querySelector("#tune_div");
@@ -17,23 +15,13 @@ let hr = 0;
 let m = 0;
 let s = 0;
 let id;
-musics = ["musics/music.mp3","musics/beep.wav","musics/Nice Wake Up.mp3"]
+musics = ["musics/music.mp3", "musics/beep.wav", "musics/Nice Wake Up.mp3","https://www.thesoundarchive.com/ringtones/Woke-up-This-Morning-Chosen-One-Mix.mp3"]
 var audio = new Audio(musics[0]);
-//setInterval(displayTime,100);
-function displayTime() {
-  sec++;
-  if (sec == 60) {
-    sec = 0;
-    min++;
-    if (min == 60) {
-      min = 0;
-      hour++;
-    }
-  }
 
-  console.log(hour + " : " + min + " : " + sec);
-}
-reset.addEventListener("click",()=>{
+reset.addEventListener("click", () => {
+    let outPutHours = document.querySelector("#hour");
+    let outPutMinutes = document.querySelector("#minute");
+    let outPutSeconds = document.querySelector("#second");
     outPutHours.innerHTML = 0;
     outPutMinutes.innerHTML = 0;
     outPutSeconds.innerHTML = 0;
@@ -43,90 +31,58 @@ reset.addEventListener("click",()=>{
 
 });
 btn.addEventListener("click", () => {
-    if(dT.value !==""){
+    if (dT.value !== "") {
 
-        if(list_items.value == 0 || list_items.value == 1 || list_items.value == 2){
-            audio.src = musics[list_items.value]
-            audio.loop = true;
+       
+        audio.src = musics[list_items.value]
+        audio.loop = true;
+        clearInterval(id)
+        var currentDateTime = new Date();
+        var alarmDateTime = new Date(
+            currentDateTime.getFullYear(),
+            currentDateTime.getMonth(),
+            currentDateTime.getDate(),
+            dT.value.split(":")[0],
+            dT.value.split(":")[1]
+        );
+
+        // If the alarm time is earlier than the current time, add a day to the alarm
+        if (alarmDateTime < currentDateTime) {
+            alarmDateTime.setDate(alarmDateTime.getDate() + 1);
         }
-        else{
-            console.log("No Enough Tunes")
-        }
-        let dateTime = new Date();
-        var hour = dT.value.split(":")[0];
-        var min = dT.value.split(":")[1];
-        audio.load();
-        
-        if (hour <= 12) {
-          hr = hour -dateTime.getHours();
-          m = min - dateTime.getMinutes()-1;
-         
-        } else {
-          hr = hour  -  dateTime.getHours();
-          m = min - dateTime.getMinutes() -1;
-         
-        }  
-          clock.src = "media/download.png";
-          id = setInterval(() => {
-            dateTime = new Date();
-            if (hour == dateTime.getHours() && min == dateTime.getMinutes()) {	
-              audio.play();
-              clearInterval(id);
-            } else {
-              s = (59 - dateTime.getSeconds())%60
-              console.log(hr + " " + m + " " + s);
-              outPutHours.innerHTML = hr;
-              outPutMinutes.innerHTML = m;
-              outPutSeconds.innerHTML = s;
-              if (s == 0) {
-                  m--
-                if (m != 0) {
-                  m--;
-                  if (m == 0) {
-                    h--
-                    m = 59  
-                    if (hr != 0) {
-                      hr--;
-                    }
-                  }
-                }
-              }
-      
+
+        clock.src = "media/download.png";
+        id = setInterval(function () {
+            // Get the current time
+            var currentDateTime = new Date();
+
+            // Calculate the remaining time until the alarm
+            var remainingTime = alarmDateTime - currentDateTime;
+
+            // If the remaining time is less than or equal to 0, clear the interval, display "Time's up!",
+            // and play the alarm sound
+            if (remainingTime <= 0) {
+                clearInterval(id);
+                audio.play()
+
+                return;
             }
-          }, 1000);
+
+            // Convert the remaining time to hours, minutes, and seconds
+            var hours = Math.floor(remainingTime / (1000 * 60 * 60));
+            var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+            let outPutHours = document.querySelector("#hour");
+            let outPutMinutes = document.querySelector("#minute");
+            let outPutSeconds = document.querySelector("#second");
+            outPutHours.innerHTML = hours
+            outPutMinutes.innerHTML = minutes
+            outPutSeconds.innerHTML = seconds
+
+        }, 1000);
+
     }
-    else{
-       alert("Please Select Time")
+    else {
+        alert("Please Select Time")
     }
-
-  
-
-  // if((year >= dateTime.getFullYear() && month >= (dateTime.getMonth()+1) && day >= dateTime.getDate()) ||
-  //    (year == dateTime.getFullYear() && month == (dateTime.getMonth()+1) && day >= dateTime.getDate())){
-  //     alert("true");
-  // }
-
-  // if( year >= dateTime.getFullYear()){
-  //     if(year == dateTime.getFullYear()){
-  //         if(month >= (dateTime.getMonth()+1)){
-  //             if(month == (dateTime.getMonth()+1)){
-  //                 if(day >= dateTime.getDate()){
-  //                     alert("true");
-  //                 }
-  //                 else{
-  //                     alert("prev date");
-  //                 }
-  //             }
-  //         }
-  //         else{
-  //             alert("prev month");
-  //         }
-  //     }
-  //     else{
-
-  //     }
-  // }
-  // else{
-  //     alert("prev date entered");
-  // }
 });

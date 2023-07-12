@@ -1,185 +1,185 @@
-*{
-    box-sizing:border-box;
-    margin: 0;
-    padding: 0;
-   
-   
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-body{
-    
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    width: 100vw;
+    height: 100dvh;
+    height: 100vh;
+    display: grid;
+    place-items: center;
 }
-.container{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    flex-direction: row-reverse;
-    
+::selection{
+    background: #000;
+    color: #fff;
 }
-.main__div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    height:100%;
-    margin: 100px 0 0 0;
-    
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.main__div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 100px 0 0 0;
 }
 
-.alarm_set{
-
-    position: relative;
-    width:350px;
-    height:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    flex-direction: column;
-    background:#e2d8d8;
-    border-radius:20px;
+.alarm_set {
+  position: relative;
+  width: 350px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  flex-direction: column;
+  background: #e2d8d8;
+  border-radius: 10px ;
 }
-.alarm{
-    display:flex;
-    justify-content:center;    
-    text-align: center;
-    color: black;
-    letter-spacing: 3px;
-    width: 300px;
-    height:60px;
-    border-radius: 10px ;
-    outline:none;
-    border: none;
-    background: linear-gradient(450deg,rgba(146, 145, 145, 0.9),rgb(155, 152, 152),#9499a0);
-    font-size:2rem;
-    font-family: 'digital-clock-font';
+.alarm {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  letter-spacing: 3px;
+  width: 300px;
+  height: 60px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background: linear-gradient(
+    450deg,
+    rgba(146, 145, 145, 0.9),
+    rgb(155, 152, 152),
+    #9499a0
+  );
+  font-size: 2rem;
+  font-family: "digital-clock-font";
 }
-.form{
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction: column;
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.btn{
-    color:#fff;
-    background: linear-gradient(10deg,rgba(5, 1, 1, 0.9),rgb(5, 1, 1),#000000);
-    outline:none;
-    width:100%;
-    height: 40px;
-    border-radius:9px;
-    margin:20px;
-    text-align: center;
-    padding: 20px auto;
-    display: block;
-    border:none;
+.btn {
+  color: #fff;
+  background: linear-gradient(10deg, rgba(5, 1, 1, 0.9), rgb(5, 1, 1), #000000);
+  outline: none;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  margin: 20px;
+  text-align: center;
+  padding: 20px auto;
+  display: block;
+  border: none;
+  cursor: pointer;
 }
-#clock{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height:20px;
-    position:absolute;
-    bottom: 65%;
-    left: 83%;
-    z-index: 3;
-   
-    
+#clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 65%;
+  left: 83%;
+  z-index: 3;
 }
-.form label{
-   
-    margin: 0 0 15px 0;
-    font-family:'Segoe UI', sans-serif;
+.form label {
+  margin: 0 0 15px 0;
+  font-family: "Segoe UI", sans-serif;
 }
-.time_elapse{
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    align-items:center;
-    flex-direction: column;
-    background:rgb(0,0,0);
-    color:#fff;
-    border-radius:10px;
-    width:100%;
-    height: 140px;
-    top:-10px;
-    z-index: 1;
-    font-weight: 100;
-   
-
+.time_elapse {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  border-radius: 10px 10px 0 0 ;
+  width: 100%;
+  height: 140px;
+  top: -10px;
+  z-index: 1;
+  font-weight: 100;
 }
 
 .time_elapse label {
-    font-family: 'Segoe UI',sans-serif;
-    font-size: 1.7rem;
-    color:#fff;
-
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1.7rem;
+  color: #fff;
 }
-.time{
-    
-    letter-spacing:2px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    position: relative;
-    width: 100%;
-    color:red;
-    font-family: 'digital-clock-font';
-   
+.time {
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  color: red;
+  font-family: "digital-clock-font";
 }
-button[type="reset"]{
-    margin: 1px 0 30px 0;
-    background:red;
-    color:#000;
-    outline: none;
-    border:none;
+button[type="reset"] {
+  margin: 1px 0 30px 0;
+  background: red;
+  color: #000;
+  outline: none;
+  border: none;
 }
-button[type="button"]{
-    margin: -6px 0 30px 0;
-    width: 40%;
-    outline: none;
-    border:none;
+button[type="button"] {
+  margin: -6px 0 30px 0;
+  width: 40%;
+  outline: none;
+  border: none;
 }
-#hour{
-    font-size: 45px;
-   
+#hour {
+  font-size: 45px;
 }
-#minute{
-    font-size: 40px;
-   
+#minute {
+  font-size: 40px;
 }
-#second{
-    font-size: 30px;
-    
+#second {
+  font-size: 30px;
 }
 @font-face {
-    font-family: 'digital-clock-font';
-    src: url('digital-7.regular.ttf');
+  font-family: "digital-clock-font";
+  src: url("digital-7.regular.ttf");
 }
-.tunes_list{
-    position: relative;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    color:#fff;
-    background:#000;
-    width: 300px;
-    height: 50px;
-    padding: 10px;
-    outline: none;
-    border:none;
-    border-radius:0 0 10px 10px ;
-    margin: 20px 0 0 0;
+.tunes_list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #000;
+  width: 300px;
+  height: 50px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  margin: 20px 0 0 0;
+  cursor:pointer;
 }
 @media screen and (max-width: 640px) {
-        *{
-        transition: all 1s ease-in-out;
-    }
+  * {
+    transition: all 1s ease-in-out;
+  }
   .alarm_set {
     position: relative;
     width: 300px;
@@ -194,22 +194,21 @@ button[type="button"]{
   }
   .alarm {
     width: 250px;
-    height:70px;
-    font-family: none;   
-  
+    height: 70px;
+    font-family: none;
   }
   .btn {
     width: 250px;
   }
-  .tunes_list{
-      width: 250px;
+  .tunes_list {
+    width: 250px;
   }
-  .time_elapse label{
-   font-size: 1.5rem;
-}
-    .time{
-    bottom:20px;
-    }
+  .time_elapse label {
+    font-size: 1.5rem;
+  }
+  .time {
+    bottom: 20px;
+  }
   #clock {
     display: flex;
     justify-content: center;
@@ -222,13 +221,12 @@ button[type="button"]{
     z-index: 3;
   }
 }
-    @media screen and (max-width: 640px) and (orientation: landscape){
-
-    body{
-        margin:0;
-        padding:0;
-    }
-    .container{
-        overflow:scroll;    
-    }
+@media screen and (max-width: 640px) and (orientation: landscape) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    overflow: scroll;
+  }
 }
